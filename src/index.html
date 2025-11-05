@@ -1,0 +1,514 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<section data-parallax class="promo">
+    <div class="promo__content">
+        <div class="promo__bg">
+            <video autoplay muted loop playsinline src="./img/video-rocket.mp4"></video>
+        </div>
+        <div class="promo__container container">
+            <ul class="promo__links">
+                <li class="promo__link"><a href="#">Сайты и лендинги</a></li>
+                <li class="promo__link"><a href="#">Чат-боты</a></li>
+                <li class="promo__link"><a href="#">Брендинг</a></li>
+                <li class="promo__link"><a href="#">SEO</a></li>
+            </ul>
+            <a class="promo__portfolio">
+                <div class="promo__portfolio-container">
+                    <b class="promo__portfolio-text">НАШЕ ПОРТФОЛИО</b>
+                    <p class="promo__portfolio-link-title">Смотреть</p>
+                    <div class="promo__portfolio-arrow">
+                        <img loading="lazy" src="./img/icons/arrow-bottom-right.svg" alt="">
+                    </div>
+                </div>
+            </a>
+            <div class="promo__info">
+                <p class="promo__desc">
+                    Выводим ваш <br> онлайн-бизнес <b>на орбиту успеха</b>
+                </p>
+                <div class="promo__logo">
+                    <img loading="lazy" src="./img/logo-b.svg" alt="">
+                </div>
+                <button type="button" class="promo__btn-mobile btn btn-gradient">
+                    <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                </button>
+            </div>
+            <div class="promo__bottom">
+                <p class="promo__text">
+                    от идеи
+                    <img loading="lazy" src="./img/icons/arrow-right-long.svg" alt="">
+                    до реализации
+                </p>
+                <button type="button" class="promo__btn-pc btn btn-gradient">
+                    <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                </button>
+            </div>
+        </div>
+        <div class="promo__stars">
+            <img data-parallax-item="30, 0.01" class="promo__star" loading="lazy" src="./img/icons/star.svg" alt="">
+            <img data-parallax-item="-30, 0.01" class="promo__star" loading="lazy" src="./img/icons/star.svg" alt="">
+            <img data-parallax-item="-30, 0.01" class="promo__star" loading="lazy" src="./img/icons/star.svg" alt="">
+        </div>
+    </div>
+</section>
+
+<section style="--line-duration: 10s" class="line">
+    <div class="line__content">
+        <div class="line__row">
+            <ul class="line__list">
+                <li class="line__item">САЙТЫ</li>
+                <li class="line__item">ПРЕЗЕНТАЦИИ</li>
+                <li class="line__item">БРЕНДИНГ</li>
+                <li class="line__item">SEO</li>
+                <li class="line__item">ЧАТ-БОТЫ</li>
+            </ul>
+        </div>
+        <div class="line__row">
+            <ul class="line__list">
+                <li class="line__item">САЙТЫ</li>
+                <li class="line__item">ПРЕЗЕНТАЦИИ</li>
+                <li class="line__item">БРЕНДИНГ</li>
+                <li class="line__item">SEO</li>
+                <li class="line__item">ЧАТ-БОТЫ</li>
+            </ul>
+        </div>
+        <div class="line__row">
+            <ul class="line__list">
+                <li class="line__item">САЙТЫ</li>
+                <li class="line__item">ПРЕЗЕНТАЦИИ</li>
+                <li class="line__item">БРЕНДИНГ</li>
+                <li class="line__item">SEO</li>
+                <li class="line__item">ЧАТ-БОТЫ</li>
+            </ul>
+        </div>
+        <div class="line__row">
+            <ul class="line__list">
+                <li class="line__item">САЙТЫ</li>
+                <li class="line__item">ПРЕЗЕНТАЦИИ</li>
+                <li class="line__item">БРЕНДИНГ</li>
+                <li class="line__item">SEO</li>
+                <li class="line__item">ЧАТ-БОТЫ</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="services" data-parallax>
+    <div class="services__container container">
+        <div class="services__top top-block">
+            <div class="top-block__space space-item"><b>чем мы можем помочь</b></div>
+            <h2 class="top-block__title services__title title title-70">Наши услуги</h2>
+        </div>
+        <div class="services__cards">
+            @@include("_s-card.html")
+            @@include("_s-card.html")
+            @@include("_s-card.html")
+            @@include("_s-card.html")
+            @@include("_s-card.html")
+            @@include("_s-card.html")
+            @@include("_s-card-add.html")
+        </div>
+    </div>
+    <img data-parallax-item="30, 0.01" class="services__star" loading="lazy" src="./img/icons/star.svg" alt="">
+</section>
+
+<section class="portfolio">
+    <div class="portfolio__container container">
+        <div class="portfolio__top top-block top-block_reverse">
+            <div class="top-block__space space-item"><b>наши работы</b></div>
+            <h2 class="top-block__title portfolio__title title title-70">Портфолио</h2>
+        </div>
+        <div class="portfolio__cards">
+            <a class="portfolio__card" href="#" style="grid-column: span 4;">
+                <div class="portfolio__card-image">
+                    <img loading="lazy" src="./img/projects/0.webp" alt="">
+                </div>
+                <h4 class="portfolio__card-title">Сайт оренбургского океанариума</h4>
+            </a>
+            <a class="portfolio__card" href="#" style="grid-column: span 6;">
+                <div class="portfolio__card-image">
+                    <img loading="lazy" src="./img/projects/1.webp" alt="">
+                </div>
+                <h4 class="portfolio__card-title">Сайт оренбургского океанариума</h4>
+            </a>
+            <a class="portfolio__card" href="#" style="grid-column: span 6;">
+                <div class="portfolio__card-image">
+                    <img loading="lazy" src="./img/projects/2.webp" alt="">
+                </div>
+                <h4 class="portfolio__card-title">Сайт оренбургского океанариума</h4>
+            </a>
+            <a class="portfolio__card" href="#" style="grid-column: span 4;">
+                <div class="portfolio__card-image">
+                    <img loading="lazy" src="./img/projects/3.webp" alt="">
+                </div>
+                <h4 class="portfolio__card-title">Сайт оренбургского океанариума</h4>
+            </a>
+            <a class="portfolio__card" href="#" style="grid-column: span 4;">
+                <div class="portfolio__card-image">
+                    <img loading="lazy" src="./img/projects/4.webp" alt="">
+                </div>
+                <h4 class="portfolio__card-title">Сайт оренбургского океанариума</h4>
+            </a>
+            <a class="portfolio__card" href="#" style="grid-column: span 6;">
+                <div class="portfolio__card-image">
+                    <img loading="lazy" src="./img/projects/5.webp" alt="">
+                </div>
+                <h4 class="portfolio__card-title">Сайт оренбургского океанариума</h4>
+            </a>
+            <a class="portfolio__card" href="#" style="grid-column: span 6;">
+                <div class="portfolio__card-image">
+                    <img loading="lazy" src="./img/projects/6.webp" alt="">
+                </div>
+                <h4 class="portfolio__card-title">Сайт оренбургского океанариума</h4>
+            </a>
+            <a class="portfolio__card" href="#" style="grid-column: span 4;">
+                <div class="portfolio__card-image">
+                    <img loading="lazy" src="./img/projects/7.webp" alt="">
+                </div>
+                <h4 class="portfolio__card-title">Сайт оренбургского океанариума</h4>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section data-parallax class="about">
+    <div class="about__body">
+        <div class="about__container container">
+            <div class="about__cards">
+                <div class="about__card">
+                    <b class="about__card-title title"><span data-counter="3000">100</span>+</b>
+                    <p class="about__card-text">
+                        <b>сайтов для разных ниш</b> бизнеса за плечами
+                    </p>
+                </div>
+                <div class="about__card">
+                    <b class="about__card-title title">><span data-counter="3000">80</span>%</b>
+                    <p class="about__card-text">
+                        клиентов <b>повторно обращаются к нам</b>
+                    </p>
+                </div>
+                <div class="about__card">
+                    <b class="about__card-title title">><span data-counter="3000">50</span>%</b>
+                    <p class="about__card-text">
+                        проектов принимаются <b>без единой правки</b>
+                    </p>
+                </div>
+            </div>
+            <div class="about__content">
+                <div class="about__space-item space-item"><b>о нас</b></div>
+                <div class="about__text">
+                    <p>
+                        <span>Агентство ONESPACE</span> специализируется на создании сайтов, чат-ботов и презентаций,
+                        помогая вашему бизнесу <b>ярко, креативно и эффективно с точки зрения продаж заявить о себе</b>
+                        в интернете.
+                    </p>
+                    <p>
+                        Мы видим своей задачей не просто сделать для Вас красивый сайт, а создать площадку, которая
+                        регулярно приводит клиентов.
+                    </p>
+                    <p>
+                        Среди сотрудников компании маркетолог, дизайнер, верстальщик, технический специалист,
+                        SEO-специалист. Абсолютно <b>каждый член команды</b> не просто знает, как грамотно выполнять
+                        задачи бизнеса, но и <b>имеет и четкое понимание, как его часть работы может повлиять на продажи
+                            в Вашем бизнесе.</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img data-parallax-item="-10, 0.05" loading="lazy" src="./img/meteor.webp" alt="" class="about__meteor">
+        <img data-parallax-item="-10, 0.01" loading="lazy" src="./img/sphere.webp" alt="" class="about__sphere">
+        <div class="about__bg">
+            <img data-parallax-item="0, 0.01" src="./img/about-bg.webp" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="team">
+    <div class="team__container container">
+        <div class="team__top">
+            <h2 class="team__title title title-70">Наша команда</h2>
+            <div class="team__space-item space-item"><b>кто будет работать над проектом</b></div>
+        </div>
+        <div class="team__cards">
+            <div class="team__card">
+                <div class="team__card-image"></div>
+                <h4 class="team__card-name">КОНСТАНТИН</h4>
+                <p class="team__card-desc">
+                    Верховный правитель и руководитель агенства ONESPACE <br>
+                    (Фулл-стек тоже)
+                </p>
+                <div class="team__card-bio">
+                    <h4>Биография о сотруднике</h4> 
+                    <p>
+                        Бродил, бродил, рыб ловил, выловил, агенство открыл
+                    </p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="team__card">
+                <div class="team__card-image">
+                    <img loading="lazy" src="./img/team/1.webp" alt="">
+                </div>
+                <h4 class="team__card-name">МАРИЯ</h4>
+                <p class="team__card-desc">
+                    графический и веб-дизайнер, SEO специалист
+                </p>
+                <div class="team__card-bio">
+                    <h4>Биография о сотруднике</h4> 
+                    <p>
+                        Бродила, бродила, рыб ловила, выловила, макеты делать не научилась..
+                    </p>
+                </div>
+            </div>
+            <div class="team__card">
+                <div class="team__card-image"></div>
+                <h4 class="team__card-name">ЕЛЕНА</h4>
+                <p class="team__card-desc">
+                    маркетолог
+                </p>
+                <div class="team__card-bio">
+                    <h4>Биография о сотруднике</h4> 
+                    <p>
+                        Бродила, бродила, рыб ловила, выловила...
+                    </p>
+                </div>
+            </div>
+            <div class="team__card">
+                <div class="team__card-image">
+                    <img loading="lazy" src="./img/anonim.webp" alt="">
+                </div>
+                <h4 class="team__card-name">Антон</h4>
+                <p class="team__card-desc">
+                    Технический лидер, Frontend-разработчик
+                </p>
+                <div class="team__card-bio">
+                    <h4>Биография о сотруднике</h4> 
+                    <p>
+                        Юморист
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-parallax class="advantages">
+    <div class="advantages__container container">
+        <div class="advantages__top top-block">
+            <h2 class="advantages__title title title-60">Наши преимущества</h2>
+            <div class="advantages__space-item space-item"><b>почему стоит выбрать нас</b></div>
+        </div>
+        <div class="advantages__cards">
+            <div class="advantages__card">
+                <div class="advantages__card-content">
+                    <h4 class="advantages__card-title">Глубокая аналитика</h4>
+                    <p class="advantages__card-text">
+                        Полноценно и всесторонне анализируем целевую аудиторию и конкурентов проекта, чтобы создать
+                        действительно рабочий сайт для продажи вашего продукта.
+                    </p>
+                </div>
+                <div class="advantages__card-bottom">
+                    <button type="button" class="advantages__card-btn btn btn-gradient">
+                        <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                    </button>
+                </div>
+                <img data-parallax-item="5, 0.01" loading="lazy" src="./img/a-1.webp" alt=""
+                    class="advantages__card-meteor">
+            </div>
+            <div class="advantages__card">
+                <div class="advantages__card-content">
+                    <h4 class="advantages__card-title">Управление поведением клиентов</h4>
+                    <p class="advantages__card-text">
+                        Применяем принципы маркетинга и психологии продаж, чтобы управлять поведением посетителей сайта,
+                        увеличивая вовлеченность и продажи без агрессивной рекламы.
+                    </p>
+                </div>
+                <div class="advantages__card-bottom">
+                    <button type="button" class="advantages__card-btn btn btn-gradient">
+                        <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                    </button>
+                </div>
+                <img data-parallax-item="-5, 0.01" loading="lazy" src="./img/a-2.webp" alt=""
+                    class="advantages__card-meteor">
+            </div>
+            <div class="advantages__card">
+                <div class="advantages__card-content">
+                    <h4 class="advantages__card-title">Сдача проекта в срок</h4>
+                    <p class="advantages__card-text">
+                        Мы знаем, что бизнес не может ждать. Клиенты нужно здесь
+                        и сейчас. Вы можете быть уверены, что работы будут выполнены с оговоренные
+                        в договоре сроки без просрочек.
+                    </p>
+                </div>
+                <div class="advantages__card-bottom">
+                    <button type="button" class="advantages__card-btn btn btn-gradient">
+                        <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                    </button>
+                </div>
+            </div>
+            <div class="advantages__card">
+                <div class="advantages__card-content">
+                    <h4 class="advantages__card-title">Рекомендации по продвижению</h4>
+                    <p class="advantages__card-text">
+                        После разработки сайта даем рекомендации по самым эффективным механизмам продвижения именно для
+                        вашего бизнеса, чтобы вы не сливали бюджет на неэффективные механизмы продвижения и рекламы.
+                    </p>
+                </div>
+                <div class="advantages__card-bottom">
+                    <button type="button" class="advantages__card-btn btn btn-gradient">
+                        <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="advantages__btn btn btn-gradient">
+            <span>ОСТАВИТЬ ЗАЯВКУ</span>
+        </button>
+    </div>
+    <img data-parallax-item="10, 0.01" loading="lazy" src="./img/a-3.webp" alt="" class="advantages__meteor">
+</section>
+
+<section class="baskets">
+    <div class="baskets__container container">
+        <div class="baskets__top top-block">
+            <h2 class="baskets__title title title-60">Пакеты услуг</h2>
+            <div class="baskets__space-item space-item"><b>выгодное предложение</b></div>
+        </div>
+        <div class="baskets__cards">
+            <div class="baskets__card">
+                <div class="baskets__card-body">
+                    <div class="baskets__card-icon">
+                        <img loading="lazy" src="./img/icons/top.svg" alt="">
+                    </div>
+                    <h4 class="baskets__card-title">Многостраничный сайт/интернет-магазин + seo продвижение</h4>
+                    <p class="baskets__card-desc">
+                        Вы получаете сайт, который сразу начнет индексироваться в поисковых системах и мы поможем ему
+                        начать выходить в Топ по ключевым запросам.
+                    </p>
+                    <div class="baskets__compound">
+                        <h5 class="baskets__compound-title">Что входит:</h5>
+                        <ul class="baskets__compound-list">
+                            <li class="baskets__compound-item">Создание многостраничного сайта</li>
+                            <li class="baskets__compound-item">Seo-оптимизация сайта</li>
+                            <li class="baskets__compound-item">Подключение домена, аналитики, эквайринга</li>
+                            <li class="baskets__compound-item">SEO-продвижение сайта</li>
+                        </ul>
+                    </div>
+                    <div class="baskets__card-price">
+                        Стоимость:
+                        <b>от 100 000 рублей</b>
+                    </div>
+                    <b class="baskets__card-price-desc">разработка сайта + 1 месяц SEO-продвижения</b>
+                    <button class="baskets__card-btn btn btn-gradient">
+                        <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                    </button>
+                </div>
+            </div>
+            <div class="baskets__card">
+                <div class="baskets__card-body">
+                    <div class="baskets__card-icon">
+                        <img loading="lazy" src="./img/icons/message.svg" alt="">
+                    </div>
+                    <h4 class="baskets__card-title">Создание лендинга + чат-бот</h4>
+                    <p class="baskets__card-desc">
+                        Вы получаете лендинг, который собирает заявки и переводит клиента в чат-бот, который помогает
+                        прогреться до покупки или начать пользоваться продуктов (если речь идет об обучении, которое
+                        проходит через чат-бот).
+                    </p>
+                    <div class="baskets__compound">
+                        <h5 class="baskets__compound-title">Что входит:</h5>
+                        <ul class="baskets__compound-list">
+                            <li class="baskets__compound-item">Создание лендинга</li>
+                            <li class="baskets__compound-item">Подключение домена, аналитики, эквайринга</li>
+                            <li class="baskets__compound-item">Создание чат-бота и его интеграция с лендингом</li>
+                        </ul>
+                    </div>
+                    <div class="baskets__card-price">
+                        Стоимость:
+                        <b>от 50 000 рублей</b>
+                    </div>
+                    <b class="baskets__card-price-desc"></b>
+                    <button class="baskets__card-btn btn btn-gradient">
+                        <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                    </button>
+                </div>
+            </div>
+            <div class="baskets__card">
+                <div class="baskets__card-body">
+                    <div class="baskets__card-icon">
+                        <img loading="lazy" src="./img/icons/repost.svg" alt="">
+                    </div>
+                    <h4 class="baskets__card-title">Многостраничный сайт/интернет-магазин + seo продвижение</h4>
+                    <p class="baskets__card-desc">
+                        Вы получаете сайт, который сразу начнет индексироваться в поисковых системах и мы поможем ему
+                        начать
+                        выходить в Топ по ключевым запросам.
+                    </p>
+                    <div class="baskets__compound">
+                        <h5 class="baskets__compound-title">Что входит:</h5>
+                        <ul class="baskets__compound-list">
+                            <li class="baskets__compound-item">Создание многостраничного сайта</li>
+                            <li class="baskets__compound-item">Seo-оптимизация сайта</li>
+                            <li class="baskets__compound-item">Подключение домена, аналитики, эквайринга</li>
+                            <li class="baskets__compound-item">SEO-продвижение сайта</li>
+                        </ul>
+                    </div>
+                    <div class="baskets__card-price">
+                        Стоимость:
+                        <b>от 100 000 рублей</b>
+                    </div>
+                    <b class="baskets__card-price-desc">разработка сайта + 1 месяц SEO-продвижения</b>
+                    <button class="baskets__card-btn btn btn-gradient">
+                        <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-parallax class="callback">
+    <div class="callback__container container">
+        <div class="callback__air">
+            <img data-parallax-item="10, 0.01" loading="lazy" src="./img/air.webp" alt="">
+            <img loading="lazy" src="./img/air-mobile.webp" alt="">
+        </div>
+        <div class="callback__top">
+            <h2 class="callback__title title title-50">Давайте обсудим ваш проект</h2>
+            <p class="callback__desc">
+                Оставьте заявку ниже. На первом созвоне мы разберем, в чем именно состоит ваша задача и каким образом мы
+                можем ее реализовать.
+            </p>
+        </div>
+        <form class="callback__form">
+            <div class="callback__labels">
+                <label class="callback__label">
+                    <input placeholder="Имя" class="custom-input" type="text">
+                </label>
+                <label class="callback__label">
+                    <input placeholder="Номер телефона" class="custom-input" type="text">
+                </label>
+                <label class="callback__label">
+                    <input placeholder="Email" class="custom-input" type="text">
+                </label>
+            </div>
+            <label class="callback__agree">
+                <input class="custom-checkbox" type="checkbox">
+                <span>Я даю согласие на обработку моих персональных данных указанных в Политике обработки персональных
+                    данных и Политике конфиденциальности.</span>
+            </label>
+            <button type="submit" class="callback__btn btn btn-gradient">
+                <span>ОСТАВИТЬ ЗАЯВКУ</span>
+            </button>
+        </form>
+    </div>
+    <div class="callback__bg">
+        <img loading="lazy" src="./img/callback-bg.webp" alt="">
+    </div>
+</section>
+
+@@include("_bottom.html")

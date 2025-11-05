@@ -1,0 +1,58 @@
+@use 'lib' as *;
+
+.line {
+	$self: &;
+	margin: 0 auto;
+	max-width: 1920px;
+	width: 100%;
+	overflow: hidden;
+	background: #020308;
+
+	&__content {
+		border-top: 1px solid #817F7F;
+		border-bottom: 1px solid #817F7F;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		padding: 30px 0px;
+	}
+
+	&__row {
+		padding-left: 58px;
+
+		animation: line var(--line-duration) linear infinite;
+		
+		@keyframes line {
+			0% {
+				transform: translateX(0%);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 58px;
+	}
+
+	&__item {
+		font-size: fluid(24px, 18px);
+		color: #817F7F;
+		position: relative;
+		text-wrap: nowrap;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%; right: calc(100% + 24px);
+			transform: translateY(-50%);
+			width: 8px; height: 8px;
+			background: #616161;
+			border-radius: 100%;
+		}
+	}
+
+}

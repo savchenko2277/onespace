@@ -1,0 +1,151 @@
+@use 'lib' as *;
+
+.team {
+	$self: &;
+
+	padding-bottom: fluid(90px, 45px);
+	overflow: hidden;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+		margin-bottom: 60px;
+	}
+
+	&__title {}
+
+	&__space-item {}
+
+	&__cards {
+		display: flex;
+		flex-direction: row;
+		align-items: start;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 48px 90px;
+		position: relative;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		max-width: 100%;
+	}
+
+	&__card-image {
+		max-width: 100%;
+		width: 366px;
+		aspect-ratio: 1 / 1;
+		border-radius: 50%;
+		overflow: hidden;
+		background: #ADADAD;
+		margin-bottom: 30px;
+		transition: all var(--trans);
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: all var(--trans);
+		}
+
+		@include media(">lg") {
+			border: 3px solid transparent;
+		}
+	}
+
+	&__card-name {
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		color: #ffffff;
+		font-weight: 700;
+		font-size: fluid(30px, 24px);
+	}
+
+	&__card-desc {
+		color: #989898;
+		max-width: 278px;
+		font-size: fluid(24px, 15px);
+		line-height: 120%;
+	}
+
+	&__card:hover &__card-bio {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+
+	@include media(">lg") {
+		&__card:hover &__card-image {
+			border-color: var(--orange);
+		}
+	}
+
+	&__card-bio {
+		position: fixed;
+		top: calc(var(--mouse-y) + 15px);
+		left: calc(var(--mouse-x) + 15px);
+		width: 300px;
+		background: rgba($color: #020308, $alpha: 0.8);
+		backdrop-filter: blur(8px);
+		color: #ffffff;
+		padding: 16px 32px;
+		font-size: 16px;
+		text-align: start;
+		gap: 8px;
+		line-height: 150%;
+		display: flex;
+		flex-direction: column;
+		font-weight: 500;
+		border-radius: 10px;
+		border: 1px solid #363636;
+		transition: opacity var(--trans), visibility var(--trans), pointer-events var(--trans);
+
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+
+		h4 {
+			font-weight: 600;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+		}
+
+		ul li {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 8px;
+
+			&::before {
+				content: '';
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background: var(--orange);
+				flex: 0 0 auto;
+			}
+		}
+
+		@include media("<=lg") {
+			display: none;
+		}
+
+	}
+
+}

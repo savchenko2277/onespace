@@ -1,0 +1,25 @@
+@use 'lib' as *;
+
+.title {
+	$self: &;
+
+	background: linear-gradient(90deg, #FFFFFF 11.77%, #D86B1E 85.3%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+	line-height: 130%;
+	font-weight: 500;
+}
+
+.title-70 {
+	font-size: fluid(70px, 36px);
+}
+
+.title-60 {
+	font-size: fluid(60px, 36px);
+}
+
+.title-50 {
+	font-size: fluid(50px, 30px);
+}

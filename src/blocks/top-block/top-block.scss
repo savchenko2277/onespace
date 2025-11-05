@@ -1,0 +1,29 @@
+@use 'lib' as *;
+
+.top-block {
+	$self: &;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+	flex-wrap: wrap;
+
+	&_reverse {
+		flex-direction: row-reverse;
+
+		@include media("<=xs") {
+			flex-direction: row;
+		}
+	}
+
+	&__space {
+
+	}
+
+	&__title {
+
+	}
+
+}

@@ -1,0 +1,168 @@
+@use 'lib' as *;
+
+.callback {
+	$self: &;
+
+	position: relative;
+	margin-top: fluid(70px, 35px);
+	padding-bottom: 96px;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		position: relative;
+		z-index: 1;
+
+		@include media("<=sm") {
+			grid-template-columns: 100%;
+			gap: 50px;
+		}
+	}
+
+	&__air {
+		grid-row: span 20;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: center;
+
+			@include media("<=sm") {
+				object-fit: cover;
+			}
+		}
+
+		img:nth-child(1) {
+			display: none;
+
+			@include media(">sm") {
+				display: block;
+			}
+		}
+
+		img:nth-child(2) {
+			@include media(">sm") {
+				display: none;
+			}
+		}
+
+		@include media("<=sm") {
+			width: 100%;
+			aspect-ratio: 1 / 1;
+			border-radius: 10px;
+			overflow: hidden;
+			grid-row: span 1;
+		}
+	}
+
+	&__top {
+		grid-row: span 1;
+		grid-column: 2 / span 1;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: fluid(74px, 50px);
+
+		@include media("<=sm") {
+			grid-column: auto / span 1;
+			order: -1;
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: fluid(32px, 16px);
+	}
+
+	&__desc {
+		font-size: fluid(18px, 13px);
+		color: #989898;
+	}
+
+	&__form {
+		grid-row: span 19;
+		grid-column: 2 / span 1;
+
+		@include media("<=sm") {
+			grid-column: auto / span 1;
+			grid-row: span 1;
+		}
+	}
+
+	&__labels {
+		display: flex;
+		flex-direction: column;
+		gap: fluid(28px, 10px);
+		margin-bottom: 24px;
+
+		.custom-input {
+			width: 100%;
+		}
+	}
+
+	&__agree {
+		display: flex;
+		flex-direction: row;
+		align-items: start;
+		gap: 24px;
+		cursor: pointer;
+		margin-bottom: fluid(70px, 40px);
+
+		.custom-checkbox {
+			flex: 0 0 auto;
+		}
+
+		&:has(.custom-checkbox:checked) {
+			span {
+				color: #fff;
+			}
+		}
+
+		span {
+			padding-top: 3px;
+			color: #989898;
+			transition: all var(--trans);
+			font-size: fluid(16px, 12px);
+		}
+
+		@include media("<=xs") {
+			gap: 10px;
+		}
+	}
+
+	&__btn {
+		width: 100%;
+	}
+
+	&__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			inset: 0;
+			background: linear-gradient(0deg, rgba(2, 3, 8, 0) 49.95%, #020308 96.58%),
+				linear-gradient(180deg, rgba(2, 3, 8, 0) 38.66%, #020308 84.15%),
+				linear-gradient(0deg, rgba(2, 3, 8, 0.4), rgba(2, 3, 8, 0.4)),
+				linear-gradient(90deg, rgba(2, 3, 8, 0) 43.47%, #020308 70.53%);
+
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include media("<=sm") {
+			display: none;
+		}
+	}
+
+}

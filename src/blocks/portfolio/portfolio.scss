@@ -1,0 +1,80 @@
+@use 'lib' as *;
+
+.portfolio {
+	$self: &;
+
+	padding: fluid(90px, 45px) 0px 95px 0px;
+
+	&__container {}
+
+	&__top {
+		margin-bottom: fluid(60px, 35px);
+	}
+
+	&__title {}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		gap: 32px;
+	}
+
+	&__card {
+		position: relative;
+		height: fluid(560px, 174px);
+		transition: all 0.5s ease-out;
+		
+		@include media("<=xs") {
+			grid-column: span 10 !important;
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+			aspect-ratio: 300 / 174;
+			height: auto; width: 100%;
+		}
+	}
+
+	&__card-image {
+		border-radius: fluid(20px, 10px);
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			transition: all var(--trans);
+		}
+	}
+
+	&__card-title {
+		position: absolute;
+		bottom: 32px;
+		left: 32px;
+		font-size: fluid(24px, 18px);
+		color: #ffffff;
+		font-weight: 700;
+		padding-right: 24px;
+
+		@include media("<=xs") {
+			top: 0 !important; left: 0 !important;
+			bottom: 0 !important; right: 0 !important;
+			padding: 0 !important;
+			position: static;
+		}
+	}
+
+	@include media(">lg") {
+		&__card:hover {
+			transform: translateX(10px);
+
+			#{$self}__card-image {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
+}

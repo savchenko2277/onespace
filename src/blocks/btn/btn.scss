@@ -1,0 +1,13 @@
+@use 'lib' as *;
+
+.btn {
+	$self: &;
+	@include flex-center;
+
+	height: fluid(80px, 70px);
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+	font-size: fluid(21px, 18px);
+	font-weight: 600;
+}

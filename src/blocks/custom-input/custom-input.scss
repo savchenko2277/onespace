@@ -1,0 +1,25 @@
+@use 'lib' as *;
+
+.custom-input {
+	$self: &;
+
+	padding: fluid(26px, 20px) fluid(30px, 20px);
+	border-radius: 5px;
+	border: 1px solid #989898;
+	font-size: fluid(21px, 15px);
+	color: #fff;
+	font-size: fluid(21px, 15px);
+	transition: all var(--trans);
+
+	&.is-error {
+		border-color: #a72f2f;
+	}
+
+	&.is-success {
+		border-color: #ffffff;
+	}
+
+	&:focus {
+		border-color: var(--orange);
+	}
+}

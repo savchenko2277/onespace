@@ -1,0 +1,17 @@
+@use 'lib' as *;
+
+.custom-checkbox {
+	$self: &;
+
+	width: 22px; height: 22px;
+	border-radius: 5px;
+	border: 1px solid #989898;
+	appearance: none;
+	cursor: pointer;
+	transition: all var(--trans);
+
+	&:checked {
+		background: var(--orange);
+		border-color: var(--orange);
+	}
+}

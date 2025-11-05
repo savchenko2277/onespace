@@ -1,0 +1,81 @@
+@use 'lib' as *;
+
+.services {
+	$self: &;
+
+	padding: fluid(100px, 80px) 0px fluid(50px, 60px) 0px;
+	overflow: hidden;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0%;
+		right: 5%;
+		width: 550px;
+		aspect-ratio: 550 / 353;
+		background: #464545;
+		filter: blur(220px);
+		border-radius: 100%;
+	}
+
+	&__container {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__top {
+		margin-bottom: fluid(55px, 28px);
+	}
+
+	&__title {}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 20px;
+
+		.s-card {
+			grid-column: span 2;
+			min-height: 497px;
+
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4) {
+				grid-column: span 3;
+				min-height: 434px;
+
+				@include media("<=sm") {
+					grid-column: span 6;
+				}
+			}
+
+			@include media("<=xlg") {
+				grid-column: span 3;
+			}
+
+			@include media("<=sm") {
+				grid-column: span 6;
+			}
+
+			@include media("<=xs") {
+				min-height: 375px;
+			}
+		}
+	}
+
+	&__star {
+		position: absolute;
+		right: 15%;
+		bottom: 12%;
+		z-index: 1;
+		width: fluid(85px, 55px);
+		height: fluid(85px, 55px);
+
+		@include media("<=md") {
+			bottom: 7%;
+		}
+	}
+
+}

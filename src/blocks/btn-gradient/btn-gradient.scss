@@ -1,0 +1,29 @@
+@use 'lib' as *;
+
+.btn-gradient {
+	$self: &;
+
+	background: linear-gradient(90deg, #D86B1E 0%, #F6F6F6 100%);
+	color: #2C2C2C;
+	font-weight: 500;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(90deg, #D86B1E 0%, #ffc194 100%);
+		opacity: 0;
+		transition: all var(--trans);
+	}
+
+	span {
+		position: relative;
+		z-index: 1;
+	}
+
+	&:hover {
+		&::after {
+			opacity: 1;
+		}
+	}
+}

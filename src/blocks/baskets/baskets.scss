@@ -1,0 +1,147 @@
+@use 'lib' as *;
+
+.baskets {
+	$self: &;
+
+	padding-top: fluid(100px, 50px);
+	padding-bottom: fluid(70px, 35px);
+
+	&__container {}
+
+	&__top {
+		margin-bottom: fluid(70px, 62px);
+	}
+
+	&__title {}
+
+	&__space-item {}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 25px;
+
+		@include media("<=xlg") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=sm") {
+			grid-template-columns: 100%;
+			gap: 16px;
+		}
+	}
+
+	&__card {
+		background: linear-gradient(180deg, #434343 0%, #020308 100%);
+		padding: fluid(30px, 20px) 30px;
+		border-radius: 20px;
+		min-height: fluid(823px, 750px);
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%; height: 100%;
+			inset: 0;
+			background: linear-gradient(180deg, #020308 0%, #434343 100%);
+			z-index: 0;
+			border-radius: 20px;
+			opacity: 0;
+			transition: all 0.5s ease-out;
+		}
+	}
+
+	&__card:hover {
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	&__card-body {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__card-icon {
+		@include flex-center;
+
+		border-radius: 10px;
+		width: 54px;
+		height: 54px;
+		border: 1px solid #989898;
+		margin-bottom: fluid(25px, 15px);
+
+		img {
+			width: 25px;
+		}
+	}
+
+	&__card-title {
+		font-weight: 500;
+		font-size: fluid(24px, 21px);
+		margin-bottom: fluid(24px, 16px);
+	}
+
+	&__card-desc {
+		font-size: fluid(16px, 13px);
+		color: #989898;
+		margin-bottom: fluid(45px, 35px);
+	}
+
+	&__compound {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		margin-bottom: 32px;
+	}
+
+	&__compound-title {
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	&__compound-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	&__compound-item {
+		padding: 6px 18px;
+		border-radius: 10px;
+		background: #303030;
+		color: #989898;
+		font-size: fluid(18px, 13px);
+	}
+
+	&__card-price {
+		margin-top: auto;
+		margin-bottom: fluid(6px, 16px);
+
+		display: flex;
+		flex-direction: column;
+		font-size: fluid(18px, 13px);
+		font-weight: 500;
+		gap: 6px;
+
+		b {
+			font-size: fluid(36px, 30px);
+			font-weight: 500;
+		}
+	}
+
+	&__card-price-desc {
+		margin-bottom: fluid(40px, 24px);
+		font-size: fluid(14px, 12px);
+		color: #989898;
+		font-weight: 400;
+		min-height: 17px;
+	}
+
+	&__card-btn {}
+
+}

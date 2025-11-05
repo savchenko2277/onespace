@@ -1,0 +1,63 @@
+@use 'lib' as * with(
+	$breakpoints: (
+		'xxxs': 360px,
+		'xxs': 480px,
+		'xs': 640px,
+		'sm': 780px,
+		'md': 960px,
+		'lg': 1100px,
+		'xlg': 1280px,
+		'xxlg': 1440px,
+		'xxxlg': 1680px,
+		'xxxxlg': 1928px
+	)
+);
+
+@use "../blocks/**/*.scss";
+
+// Подключение шрифтов
+
+@include font-face("InterTight-Black", "IT", 900);
+@include font-face("InterTight-Bold", "IT", 700);
+@include font-face("InterTight-ExtraBold", "IT", 800);
+@include font-face("InterTight-Extralight", "IT", 200);
+@include font-face("InterTight-Light", "IT", 300);
+@include font-face("InterTight-Medium", "IT", 500);
+@include font-face("InterTight-Regular", "IT", 400);
+@include font-face("InterTight-SemiBold", "IT", 600);
+@include font-face("InterTight-Thin", "IT", 100);
+
+
+body, html {
+	background-color: var(--background);
+	font-size: var(--size);
+	color: var(--text);
+	font-family: "IT", sans-serif;
+	line-height: 1.2;
+	font-weight: 400;
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+}
+
+body.is-resize * {
+   animation: none !important;
+   transition: none !important;
+}
+
+.footer {
+	flex: 0 0 auto; 
+	margin-top: auto; 
+}
+
+.sprite {
+	display: none;
+}
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+.no-scroll {
+	overflow: hidden;
+	padding-right: var(--sw);
+}
