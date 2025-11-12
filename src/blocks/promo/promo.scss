@@ -300,6 +300,18 @@
 			width: 40%;
 			object-fit: contain;
 
+			@include media("<=lg") {
+				width: 60%;
+				left: 50%;
+				transform: translateX(-50%) !important;
+			}
+
+			@include media("<=xs") {
+				min-width: 500px;
+				height: auto;
+				object-fit: cover;
+				bottom: -15%;
+			}
 		}
 
 		&-sphere-1 {
@@ -307,13 +319,22 @@
 			position: absolute;
 			top: 22%; left: -10%;
 			filter: brightness(0.4) contrast(1.2);
+
+			@include media("<=lg") {
+				left: -50%;
+			}
 		}
 
 		&-planet-1 {
 			position: absolute;
-			bottom: 15%; right: -5%;
+			bottom: fluid(15%, 25%); right: -5%;
 			width: 600px;
 			filter: brightness(0.6) contrast(1.2);
+
+			@include media("<=lg") {
+				right: -50%;
+				filter: brightness(0.4) contrast(1.2);
+			}
 		}
 	}
 

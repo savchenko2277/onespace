@@ -23,7 +23,13 @@
 	}
 
 	&__column {
-
+		&:nth-child(2) {
+			display: flex;
+			flex-direction: column;
+			@include media(">md") {
+				align-items: end;
+			}
+		}
 	}
 
 	&__logo {
@@ -52,14 +58,14 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		font-size: fluid(54px, 30px);
-		gap: fluid(15px, 8px);
+		font-size: 24px;
+		gap: 12px;
 		font-weight: 700;
-		margin-bottom: fluid(36px, 25px);
+		margin-bottom: 24px;
 		transition: all var(--trans);
 
 		img {
-			width: fluid(40px, 25px); height: fluid(40px, 25px);
+			width: 18px; height: 18px;
 			object-fit: cover;
 		}
 
@@ -72,11 +78,11 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 20px;
+		gap: 12px;
 	}
 
 	&__social {
-		width: fluid(65px, 55px); height: fluid(65px, 55px);
+		width: 32px; height: 32px;
 		object-fit: cover;
 		transition: all var(--trans);
 
@@ -87,7 +93,8 @@
 
 	&__bottom {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(2, auto);
+		justify-content: space-between;
 
 		@include media("<=md") {
 			display: flex;
