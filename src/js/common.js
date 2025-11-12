@@ -43,19 +43,6 @@ const setHeader = () => {
 	window.addEventListener('resize', throttle(updateHeader, 200), { passive: true });
 }
 
-const setRocketVideoTime = () => {
-	const video = document.querySelector('.promo__bg video');
-	if (!video) return;
-
-	const setDuration = () => {
-		const videoTime = video.duration || 0;
-		document.documentElement.style.setProperty('--video-time', `${videoTime}s`);
-		video.parentElement.classList.add('is-ready');
-	};
-
-	video.addEventListener('loadedmetadata', setDuration);
-};
-
 const setParallax = () => {
 	const parallaxBlocks = document.querySelectorAll('[data-parallax]');
 
@@ -216,7 +203,4 @@ setParallax();
 setStopAnimation();
 setCounters('.about');
 setTeamCursorCoords();
-
-document.addEventListener('DOMContentLoaded', setRocketVideoTime);
-window.addEventListener('resize', throttle(setRocketVideoTime, 200), { passive: true });
-window.addEventListener('resize', throttle(setStopAnimation, 500), { passive: true });
+setStopAnimation();

@@ -4,7 +4,6 @@
 	$self: &;
 
 	background: #292929;
-	padding-top: var(--header-height);
 
 	&__content {
 		background: #02020A;
@@ -12,52 +11,7 @@
 		overflow: hidden;
 		position: relative;
 		width: 100%;
-	}
-
-	&__bg {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 0;
-
-		&.is-ready {
-			&::after {
-				animation: fadeInRocket var(--video-time) ease infinite;
-			}
-		}
-
-		&::after {
-			content: '';
-			inset: 0;
-			background: #02020A;
-			opacity: 0.2;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			z-index: 1;
-
-			@keyframes fadeInRocket {
-				0% {
-					opacity: 0.2;
-				}
-
-				50% {
-					opacity: 0.5;
-				}
-
-				100% {
-					opacity: 0.8;
-				}
-			}
-		}
-
-		video {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: bottom center;
-		}
+		padding-top: var(--header-height);
 	}
 
 	&__container {
@@ -272,7 +226,8 @@
 	&__stars {
 		position: absolute;
 		inset: 0;
-		width: 100%; height: 100%;
+		width: 100%;
+		height: 100%;
 		pointer-events: none;
 		z-index: 1;
 	}
@@ -283,20 +238,82 @@
 		filter: blur(3px);
 
 		&:nth-child(1) {
-			top: 12%; left: 20%;
+			top: 12%;
+			left: 20%;
 			width: fluid(126px, 40px);
 			opacity: 0.5;
 		}
 
 		&:nth-child(2) {
-			bottom: 35%; right: 25%;
+			bottom: 35%;
+			right: 25%;
 			width: fluid(170px, 60px);
 			opacity: 0.5;
 		}
 
 		&:nth-child(3) {
-			top: 50%; left: 5%;
+			top: 50%;
+			left: 5%;
 			width: fluid(65px, 60px);
+		}
+	}
+
+	&__animation {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+
+		&::after {
+			content: "";
+			background: linear-gradient(180deg, rgba(2, 3, 8, 0) 53.43%, rgba(2, 3, 8, 0.9) 86.38%);
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+		}
+
+		&-cosmos {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			inset: 0;
+			object-fit: cover;
+			object-position: center bottom;
+			z-index: 0;
+			scale: 1.01;
+		}
+
+		&-planet {
+			width: 60%;
+			position: absolute;
+			left: 20%;
+			top: -50%;
+			object-fit: contain;
+			z-index: 1;
+		}
+
+		&-rocket {
+			position: absolute;
+			left: 30%;
+			bottom: -20%;
+			z-index: 2;
+			width: 40%;
+			object-fit: contain;
+
+		}
+
+		&-sphere-1 {
+			width: 400px;
+			position: absolute;
+			top: 22%; left: -10%;
+			filter: brightness(0.4) contrast(1.2);
+		}
+
+		&-planet-1 {
+			position: absolute;
+			bottom: 15%; right: -5%;
+			width: 600px;
+			filter: brightness(0.6) contrast(1.2);
 		}
 	}
 
