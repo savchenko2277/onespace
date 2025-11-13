@@ -7,9 +7,15 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	background: rgba($color: #202020, $alpha: 0.85);
-	backdrop-filter: blur(6px);
 	z-index: 100;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: rgba($color: #202020, $alpha: 0.85);
+		backdrop-filter: blur(6px);
+	}
 
 	&__container {
 		display: flex;
